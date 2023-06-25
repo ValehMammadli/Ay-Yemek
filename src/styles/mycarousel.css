@@ -1,0 +1,15 @@
+.carousel .slide img {
+    width: 100px; }
+
+    .carousel-slide {
+        display: flex;
+        
+        flex-wrap: wrap;
+        overflow: hidden;
+      }
+      
+      .carousel-slide div {
+        flex: 0 0 25%; /* Adjust the width to 25% for each item */
+  padding: 0 10px; /* Add some padding between items */
+  min-width: 0; /* Ensure the item has a minimum width */
+      }
