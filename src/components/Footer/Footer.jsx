@@ -19,7 +19,7 @@ const footerdata = [
   },
   {
     display: "Haqqımızda",
-    path: "/abouts",
+    path: "/about",
   },
   {
     display: "Əlaqə",
@@ -35,9 +35,9 @@ const Footer = () => {
   return (
     <Container>
       <div className='footer_items'>
-        <div className='footer_arrow'>
-          <img src={HomeArrow} alt="" />
-        </div>
+        {/* <div className='footer_arrow'>
+          <button style={{border:'none', backgroundColor:'transparent'}}><img src={HomeArrow} alt="" /></button>
+        </div> */}
         <div className='footer_description'>
          <div className='footer_logo'> <img src={logo} alt="" /></div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
