@@ -1,0 +1,47 @@
+.howitworks{
+    margin-top: 80px;
+height: 650px;
+}
+.howitworks_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.howitworks_title h3{
+color: #0E6BA8;
+font-size: 42px;
+font-weight: 600;
+line-height: 51px;
+letter-spacing: 0em;
+text-align: center;
+}
+.howitworks_title p{
+   color: #75797F;
+font-size: 19px;
+font-weight: 400;
+line-height: 31px;
+letter-spacing: 0em;
+text-align: center;
+}
+.howitworks__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.howitworks__item p{
+  color: #F75C035E;
+font-size: 35px;
+font-weight: 600;
+line-height: 42px;
+letter-spacing: 0em;
+text-align: left;
+}
+.howitworks__item h4{
+  color: #00072D;
+font-size: 20px;
+font-weight: 600;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+
+}
