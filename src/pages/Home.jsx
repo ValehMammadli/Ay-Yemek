@@ -3,13 +3,6 @@ import heroimg from "../assets/heroimg.png";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import Category from "../components/Category/Category";
-<<<<<<< HEAD
-
-const Home = () => {
-  return (
-    <>
-      <section>
-=======
 import '../styles/home.css'
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 import Feedback from "../components/Feedbacks/feedback";
@@ -19,7 +12,6 @@ const Home = () => {
   return (
     <>
       <section className="home_about" style={{backgroundColor:'#F7F7F7'}}>
->>>>>>> f/main
         <Container>
           <Row>
             <Col lg="6" md="6">
@@ -41,13 +33,6 @@ const Home = () => {
         </Container>
       </section>
 
-<<<<<<< HEAD
-      <section>
-        <Category/>
-
-      </section>
-
-=======
       <section style={{backgroundColor:'#F7F7F7'}}>
         <Category/>
 
@@ -64,7 +49,6 @@ const Home = () => {
 <section style={{backgroundColor:'#F7F7F7'}}>
   <Questions/>
 </section>
->>>>>>> f/main
     
     </>
   );

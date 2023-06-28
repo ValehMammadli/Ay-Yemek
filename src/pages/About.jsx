@@ -1,10 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
-
-const About = () => {
-  return (
-    <div>About</div>
-=======
 import { Container, Row, Col } from "reactstrap";
 import about1 from '.././assets/about1.png'
 import about2 from '.././assets/about2.png'
@@ -32,7 +26,6 @@ Content here', making it look like readable English. Many desktop publishing pac
       </div>
     </div>
     </Container>
->>>>>>> f/main
   )
 }
 
