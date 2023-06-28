@@ -1,4 +1,10 @@
 import React from 'react'
+<<<<<<< HEAD
+
+const Footer = () => {
+  return (
+    <div>Footer</div>
+=======
 import { Container } from 'reactstrap'
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -60,6 +66,7 @@ const Footer = () => {
         </div>
       </div>
     </Container>
+>>>>>>> f/main
   )
 }
 
