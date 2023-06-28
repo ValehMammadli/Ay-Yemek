@@ -1,0 +1,11 @@
+.product-card{
+    display: flex;
+    flex-direction: column;
+    ;
+}
+
+.allfoods {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
