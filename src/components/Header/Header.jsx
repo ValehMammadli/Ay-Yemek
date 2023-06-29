@@ -25,7 +25,7 @@ const nav__links = [
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className="header" style={{backgroundColor: '#F7F7F7'}}>
       <Container>
         <div className="nav_wrapper d-flex align-items-center justify-content-between">
           <div className="logo">

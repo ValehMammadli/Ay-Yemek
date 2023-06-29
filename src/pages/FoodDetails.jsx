@@ -11,8 +11,8 @@ const FoodDetails = (props) => {
         <h3><Link to={`/foods/${id}`}>{title}</Link></h3>
         <p>{desc}</p>
 
-        <div>
-          <span className="product__price">{price}</span>
+        <div className="add_cart">
+          <span className="product__price">{price}₼ </span>
           <button className="addToCart__btn">Əlavə et</button>
         </div>
       </div>

@@ -51,18 +51,22 @@ const AllFoods = (props) => {
 
 
   return (
+    <div style={{backgroundColor:'#F7F7F7'}}>
     <Container>
-      <div className="paket">
-        <Col lg="12" className="text-center">
-          YEMƏKLƏR
+      <div className="paket" >
+        <Col lg="12" className="text-margin">
+        </Col>
+        <Col lg="12" className="text-left">
+         EKONOM
         </Col>
     
           <div className="food__category d-flex align-items-center gap-4">
-            <div className="all__btn" onClick={()=>{setCategory("ALL")}}>ALL</div>
-            <button onClick={()=>{setCategory("Ana Yemək")}}>Ana Yemək</button>
-            <button onClick={()=>{setCategory("Garnir")}}>Garnir</button>
-            <button onClick={()=>{setCategory("Salat")}}>Salat</button>
-            <button onClick={()=>{setCategory("İçki")}}>İçki</button>
+          <div className="all__btn" onClick={()=>{setCategory("ALL")}}>ALL</div>
+        
+            <button  className="anayemek"  onClick={()=>{setCategory("Ana Yemək")}}>Ana Yemək</button>
+            <button  className="garnir"  onClick={()=>{setCategory("Garnir")}}>Garnir</button>
+            <button  className="salat"  onClick={()=>{setCategory("Salat")}}>Salat</button>
+            <button  className="icki" onClick={()=>{setCategory("İçki")}}>İçki</button>
           </div>
        
           <div className="allfoods">
@@ -83,6 +87,7 @@ const AllFoods = (props) => {
 
       </div>
     </Container>
+    </div>
   );
 };
 

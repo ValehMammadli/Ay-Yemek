@@ -1,7 +1,7 @@
-import anayemek1 from "../pics/anayemek1.jpg"
+import anayemek1 from "../pics/anayemek1.jpeg"
 import anayemek2 from "../pics/anayemek2.jpg"
 import anayemek3 from "../pics/anayemek3.jpg"
-import anayemek4 from "../pics/anayemek4.jpg"
+import anayemek4 from "../pics/dolma.jpg"
 
 import garnir1 from "../pics/garnir1.jpg"
 import garnir2 from "../pics/garnir2.jpg"
@@ -21,11 +21,11 @@ const products = [
     {
       id: "01",
       title: "Salmon Salat ilə",
-      price: 24.0,
+      price: 24.0 ,
       image: anayemek1,
       category: "Ana Yemək",
   
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+      desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   
     {
@@ -35,7 +35,7 @@ const products = [
         image: anayemek2,
         category: "Ana Yemək",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   
     {
@@ -45,7 +45,7 @@ const products = [
         image: anayemek3,
         category: "Ana Yemək",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   
     { id: "04",
@@ -54,7 +54,7 @@ const products = [
     image: anayemek4,
     category: "Ana Yemək",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+    desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   
     {
@@ -64,7 +64,7 @@ const products = [
         image: garnir1,
         category: "Garnir",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
     {
         id: "06",
@@ -73,7 +73,7 @@ const products = [
         image: garnir2,
         category: "Garnir",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   
     { id: "07",
@@ -82,7 +82,7 @@ const products = [
     image: garnir3,
     category: "Garnir",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+    desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   
     {
@@ -92,7 +92,7 @@ const products = [
         image: garnir4,
         category: "Garnir",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   
     {
@@ -102,7 +102,7 @@ const products = [
         image: salat1,
         category: "Salat",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   
     {
@@ -112,7 +112,7 @@ const products = [
         image: salat2,
         category: "Salat",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   
     {
@@ -122,7 +122,7 @@ const products = [
         image: salat3,
         category: "Salat",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   
     {
@@ -132,7 +132,7 @@ const products = [
         image: salat4,
         category: "Salat",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   
     {
@@ -142,7 +142,7 @@ const products = [
         image: içki1,
         category: "İçki",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
 
     {
@@ -152,7 +152,7 @@ const products = [
         image: içki2,
         category: "İçki",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
     {
         id: "15",
@@ -161,7 +161,7 @@ const products = [
         image: içki3,
         category: "İçki",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
     {
         id: "16",
@@ -170,7 +170,7 @@ const products = [
         image: içki4,
         category: "İçki",
     
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+        desc: "With only 5 ingredients, these black bean tostadas are the easiest and fastes You can always include additional toppings like corn salsa, avocado ranch ",
     },
   ];
   
