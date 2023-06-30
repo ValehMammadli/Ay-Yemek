@@ -3,11 +3,16 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import products from "../assets/fake-data/products";
 import FoodDetails from "./FoodDetails";
-import "../styles/allFoods.css"
 
-const AllFoods = (props) => {
+import "../styles/allFoods.css"
+import Cart from "../components/Cart/Cart";
+
+
+const AllFoods = () => {
+  
   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
+  
 
   useEffect(() => {
     if (category === "ALL") {
@@ -81,6 +86,7 @@ const AllFoods = (props) => {
     <form>
       <input type="text" />
       <input type="email" />
+      <Cart/>
     </form>
   </div>
 </div>
