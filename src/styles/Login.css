@@ -1,0 +1,128 @@
+.login-text h1 {
+    color: rgba(247, 92, 3, 1);
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    margin-top: 195px;
+    margin-left: 95px;
+}
+
+.login-text p {
+    color: rgba(117, 121, 127, 1);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    margin-top: 25px;
+    margin-left: 95px;
+}
+
+.email-input,
+.pass-input {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.email-input label,
+.pass-input label {
+    position: absolute;
+    top: -25px;
+}
+
+.email-input input,
+.pass-input input {
+    width: 436px;
+    height: 58px;
+    border-radius: 6px;
+    border: 1px solid rgba(211, 211, 211, 1);
+    outline: none;
+}
+
+.daxil-ol {
+    width: 416px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: rgba(247, 92, 3, 1);
+    border: none;
+    outline: none;
+    color: #fff;
+    margin-top: 20px !important;
+    margin-left: 200px;
+}
+
+/* .login-bg img {
+    width: 1010px;
+    height: 881px;
+} */
+
+.login-bg {
+
+    background-image: url(C:\Users\Nicat\Desktop\Ay-Yemek\src\assets\login-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.login-bg h3 {
+    width: 635px;
+    color: #fff;
+    font-size: 41px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    margin-top: 285px;
+    margin-left: 40px;
+}
+
+.login-bg p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    margin-top: 35px;
+    margin-left: 40px;
+
+}
+
+log-form {
+    margin-top: 80px;
+}
+
+.logtoreg {
+    margin-left: 250px;
+    margin-top: 25px;
+}
+
+.logtoreg a {
+    color: rgba(247, 92, 3, 1);
+    text-decoration: underline;
+}
+
+.welcome-log-items button {
+    border: none;
+    outline: none;
+    width: 153px;
+    height: 55px;
+    padding: 12px 32px 12px 32px;
+    border-radius: 16px;
+
+    background-color: rgba(247, 92, 3, 1);
+    color: #fff;
+    margin-left: 940px;
+    margin-top: 30px;
+    margin-bottom: 200px;
+}
+
+.welcome-log-items h1 {
+    color: rgba(247, 92, 3, 1);
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    padding: 80px 0 100px 520px;
+    margin-left: 130px;
+}

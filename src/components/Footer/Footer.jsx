@@ -1,13 +1,13 @@
-import React from 'react'
-import { Container } from 'reactstrap'
+import React from "react";
+import { Container } from "reactstrap";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import HomeArrow from '../../assets/homearrow.png'
-import logo from '../../assets/logo.png'
-import face from '../../assets/fb.png'
-import insta from '../../assets/insta.png'
-import twit from '../../assets/twit.png'
-import "../../styles/footer.css"
+import HomeArrow from "../../assets/homearrow.png";
+import logo from "../../assets/logo.png";
+import face from "../../assets/fb.png";
+import insta from "../../assets/insta.png";
+import twit from "../../assets/twit.png";
+import "../../styles/footer.css";
 const footerdata = [
   {
     display: "Ana Səhifə",
@@ -24,29 +24,34 @@ const footerdata = [
   {
     display: "Əlaqə",
     path: "/contact",
-  }
-  ,
+  },
   {
-    display: "FAQs"
-  }
-]
+    display: "FAQs",
+  },
+];
 
 const Footer = () => {
   return (
-    <Container>
-      <div className='footer_items'>
+    <div className="footer_items" style={{ backgroundColor: "#F7F7F7" }}>
+      <Container>
         {/* <div className='footer_arrow'>
           <button style={{border:'none', backgroundColor:'transparent'}}><img src={HomeArrow} alt="" /></button>
         </div> */}
-        <div className='footer_description'>
-         <div className='footer_logo'> <img src={logo} alt="" /></div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-          <div className='footer_nav'>
+        <div className="footer_description">
+          <div className="footer_logo">
+            {" "}
+            <img src={logo} alt="" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <div className="footer_nav">
             {footerdata.map((item, index) => (
-              <Link to={item.path} >{item.display}</Link>
+              <Link to={item.path}>{item.display}</Link>
             ))}
           </div>
-          <div className='socialMedia'>
+          <div className="socialMedia">
             <a href="#">
               <img src={face} alt="" />
             </a>
@@ -58,9 +63,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>
-    </Container>
-  )
-}
+      </Container>
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;

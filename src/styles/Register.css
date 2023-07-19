@@ -1,0 +1,90 @@
+.register-text {
+    color: rgba(247, 92, 3, 1);
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    margin-left: 90px;
+}
+
+.reg-form {
+    margin-top: 70px;
+    margin-left: 120px;
+}
+
+.name-input,
+.sn-input,
+.bd-input,
+.pw-input,
+.mail-input,
+.add-input {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.name-input label,
+.sn-input label,
+.bd-input label,
+.pw-input label,
+.mail-input label,
+.add-input label {
+    position: absolute;
+    top: -25px;
+    left: 5px;
+}
+
+.name-input p,
+.sn-input p,
+.bd-input p,
+.pw-input p,
+.mail-input p,
+.add-input p {
+    color: red;
+}
+
+.name-input input,
+.sn-input input,
+.bd-input input,
+.pw-input input,
+.mail-input input,
+.add-input input {
+    width: 416px;
+    height: 48px;
+    border-radius: 6px;
+    border: 1px solid rgba(211, 211, 211, 1);
+    outline: none;
+}
+
+.reg-btn {
+    width: 416px;
+    height: 48px;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    background-color: rgba(247, 92, 3, 1);
+}
+
+.welcome-items h1 {
+    color: rgba(247, 92, 3, 1);
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    margin-top: 140px;
+    margin-left: 130px;
+}
+
+.welcome-items button {
+    border: none;
+    outline: none;
+    width: 153px;
+    height: 55px;
+    padding: 12px 32px 12px 32px;
+    border-radius: 16px;
+
+    background-color: rgba(247, 92, 3, 1);
+    color: #fff;
+    margin-left: 350px;
+    margin-top: 100px;
+}
