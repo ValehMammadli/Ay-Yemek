@@ -1,3 +1,5 @@
+
+
 .login-text h1 {
     color: rgba(247, 92, 3, 1);
     font-size: 45px;
@@ -59,7 +61,7 @@
 
 .login-bg {
 
-    background-image: url(C:\Users\Nicat\Desktop\Ay-Yemek\src\assets\login-img.png);
+    background-image: url(../assets/login-img.png);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;

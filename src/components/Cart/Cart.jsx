@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart } from '../../redux/cartSlice';
 import { FaTrash } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 const Cart = () => {
@@ -32,6 +33,9 @@ const Cart = () => {
         </div>
       ))}
       <div>Total Price: {totalPrice}₼</div>
+      <Link to="/checkout">
+        <button>Proceed to Checkout</button>
+      </Link>
     </div>
   );
 };

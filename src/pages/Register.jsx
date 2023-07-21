@@ -111,7 +111,7 @@ const Register = () => {
               </div>
 
               <button className="reg-btn" type="submit">
-                Register
+                Qeydiyyatdan Keç
               </button>
             </form>
           </div>
