@@ -113,7 +113,9 @@ const AllFoods = () => {
             </div>
             <div className="form-column">
               <form>
+                <p>Ünvan</p>
                 <input type="text" />
+                <p>Çatdırılma saatını seçin</p>
                 <input type="email" />
                 <Cart />
               </form>

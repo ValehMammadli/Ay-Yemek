@@ -31,7 +31,8 @@
 .food__category {
     margin-top: 30px;
 }
-.all__btn{
+
+.all__btn {
     width: 40px;
     height: 30px;
     border-radius: 10px;
@@ -90,7 +91,8 @@
 .anayemek:hover,
 .salat:hover,
 .garnir:hover,
-.icki:hover , .all_btn {
+.icki:hover,
+.all_btn {
     background-color: #f75c03;
     color: #fff;
 }
@@ -156,22 +158,25 @@ color: #FFF;}
     text-align: left;
 
 }
-.add_cart{
+
+.add_cart {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 25px;
 }
-.add_cart span{
+
+.add_cart span {
     font-family: Public Sans;
     font-size: 24px;
-font-weight: 500;
-line-height: 19px;
-letter-spacing: 0em;
-text-align: center;
-color: #00072D;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #00072D;
 }
-.add_cart button{
+
+.add_cart button {
     width: Fixed (115px);
     height: Fixed (33px);
     padding: 3px 24px 3px 24px;
@@ -182,7 +187,29 @@ color: #00072D;
     box-shadow: 0px 6px 16px 0px #f75c0334;
     border: none;
 }
-.add_cart button:hover{
+
+.add_cart button:hover {
     background-color: #f75c03;
-    color: #fff; 
+    color: #fff;
+}
+
+form {
+    margin-left: 30px;
+}
+
+form input {
+    width: 411px;
+    height: 62px;
+    outline: none;
+    border: 1px solid rgba(211, 211, 211, 1);
+    border-radius: 10px;
+
+}
+
+form p {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.5px;
 }

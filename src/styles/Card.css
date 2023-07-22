@@ -1,0 +1,71 @@
+.selected-foods {
+    width: 411px;
+    height: 725px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid rgba(211, 211, 211, 1);
+    margin-top: 70px;
+    position: relative;
+}
+
+
+.selected-foods h1 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0em;
+    color: rgba(247, 92, 3, 1);
+    margin: 10px 15px;
+}
+
+.category span {
+    color: rgba(247, 92, 3, 1);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+
+
+}
+
+.food-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-name span {
+    color: rgba(32, 32, 32, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+
+
+}
+
+.total-price span {
+    color: #f75c03;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    margin-left: 15px;
+    position: absolute;
+    bottom: 80px;
+
+}
+
+.checkout-btn button {
+    position: absolute;
+    bottom: 10px;
+    left: 23px;
+    width: 365px;
+    height: 55px;
+    border-radius: 16px;
+    color: #fff;
+    outline: none;
+    border: none;
+    background-color: #f75c03;
+    box-shadow: 0px 6px 16px 0px rgba(247, 92, 3, 0.2);
+
+}
