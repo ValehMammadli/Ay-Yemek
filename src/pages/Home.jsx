@@ -6,8 +6,7 @@ import Category from "../components/Category/Category";
 import "../styles/home.css";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 import Feedback from "../components/Feedbacks/feedback";
-import FavouriteFoods from "../components/FavouriteFoods/FavouriteFoods";
-import Questions from "../components/Questions/Questions";
+
 const Home = () => {
   return (
     <>
@@ -42,12 +41,7 @@ const Home = () => {
       <section style={{ backgroundColor: "#F7F7F7" }}>
         <Feedback />
       </section>
-      <section style={{ backgroundColor: "#F7F7F7" }}>
-        <FavouriteFoods />
-      </section>
-      <section style={{ backgroundColor: "#F7F7F7" }}>
-        <Questions />
-      </section>
+     
     </>
   );
 };

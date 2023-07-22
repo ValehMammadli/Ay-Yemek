@@ -95,6 +95,9 @@
     color: #fff;
 }
 
+.active {background: #F75C03;
+color: #FFF;}
+
 .product__item {
     display: flex;
 

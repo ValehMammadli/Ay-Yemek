@@ -7,7 +7,7 @@
   }
   
   .checkout-form {
-    width: 40%;
+    width: 50%;
     height: 100%;
     padding: 40px;
     background-color: #f7f7f7;
@@ -35,6 +35,15 @@
     margin-bottom: 5px;
   }
   
+  .checkout-form h3{
+    color: #F75C03;
+font-family: Inter;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; /* 155.556% */
+letter-spacing: 0.5px;
+  }
   .checkout-form label {
     color: #000;
     font-size: 14px;
@@ -93,11 +102,13 @@
   }
   
   .checkout-image {
-    width: 60%;
+    width: 50%;
     height: 100%;
-    background-image: url('path_to_your_image');
+    background-image: url("../assets/login-img.png");
+    
+    border-radius: 10px;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 0 10px 10px 0;
+    
   }
   
