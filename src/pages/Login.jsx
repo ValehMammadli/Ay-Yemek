@@ -6,7 +6,7 @@ import "../styles/Login.css";
 import login from "../assets/login-img.png";
 import { Container } from "reactstrap";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 const schema = yup.object().shape({
   email: yup
     .string()
@@ -31,7 +31,12 @@ const Login = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#F7F7F7" }}>
+    <motion.div
+      initial={{ opacity: 0, translateY: 75 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 0.3 }}
+      style={{ backgroundColor: "#F7F7F7" }}
+    >
       {isLoggedIn ? (
         <div className="welcome-log-items">
           <h1>Welcome, logged-in user!</h1>
@@ -91,7 +96,7 @@ const Login = () => {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

@@ -6,10 +6,14 @@ import Category from "../components/Category/Category";
 import "../styles/home.css";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 import Feedback from "../components/Feedbacks/feedback";
-
+import { motion } from "framer-motion";
 const Home = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, translateY: 75 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <section className="home_about" style={{ backgroundColor: "#F7F7F7" }}>
         <Container>
           <Row>
@@ -32,17 +36,21 @@ const Home = () => {
         </Container>
       </section>
 
-      <section style={{ backgroundColor: "#F7F7F7" }}>
+      <motion.section
+        initial={{ opacity: 0, translateY: 30 }}
+        animate={{ opacity: 1, translateY: 0, transition: 0.3 }}
+        data-aos="fade-down"
+        style={{ backgroundColor: "#F7F7F7" }}
+      >
         <Category />
-      </section>
+      </motion.section>
       <section style={{ backgroundColor: "#F7F7F7" }}>
         <HowItWorks />
       </section>
       <section style={{ backgroundColor: "#F7F7F7" }}>
         <Feedback />
       </section>
-     
-    </>
+    </motion.div>
   );
 };
 

@@ -4,7 +4,7 @@ import { removeFromCart } from "../../redux/cartSlice";
 import { FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../styles/Card.css";
-
+import { motion } from "framer-motion";
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
@@ -18,7 +18,12 @@ const Cart = () => {
   };
 
   return (
-    <div className="selected-foods">
+    <motion.div
+      initial={{ opacity: 0, translateY: 75 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 0.3 }}
+      className="selected-foods"
+    >
       {" "}
       <h1>Seçilən yeməklər</h1>
       {categories.map((category) => (
@@ -33,7 +38,11 @@ const Cart = () => {
                 <div className="food-name">
                   <span>{item.title} </span>
                   <span style={{ marginTop: "5px" }}>
-                    <button onClick={() => handleRemoveFromCart(item.id)}>
+                    <button
+                      className="dlt-btn"
+                      style={{ border: "none", backgroundColor: "transparent" }}
+                      onClick={() => handleRemoveFromCart(item.id)}
+                    >
                       <FaTrash />
                     </button>
                   </span>
@@ -48,7 +57,7 @@ const Cart = () => {
       <Link to="/checkout" className="checkout-btn">
         <button>Proceed to Checkout</button>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

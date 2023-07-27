@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import "../styles/Register.css";
-
+import { motion } from "framer-motion";
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
   surname: yup.string().required("Surname is required"),
@@ -32,7 +32,12 @@ const Register = () => {
   };
 
   return (
-    <div style={{ display: "flex" }}>
+    <motion.div
+      initial={{ opacity: 0, translateY: 75 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 0.3 }}
+      style={{ display: "flex" }}
+    >
       <div style={{ backgroundColor: "#F7F7F7", width: "50%" }}>
         {isLoggedIn ? (
           <div className="welcome-items">
@@ -124,7 +129,7 @@ const Register = () => {
         <h3>SİZ SEÇİN BİZ İSTƏDİYİNİZ ZAMANDA YEMƏKLƏRİNİZİ ÇATDIRAQ</h3>
         <p>Sizin həyat tərzinizə və büdcənizə uyğun yemək planları</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
