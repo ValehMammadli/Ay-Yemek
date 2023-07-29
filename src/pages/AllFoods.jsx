@@ -49,6 +49,22 @@ const AllFoods = () => {
     }
   }, [category]);
 
+  const container = {
+    visible: {
+      transition: {
+        // delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  const equipments = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <motion.div style={{ backgroundColor: "#F7F7F7" }} initial={{ opacity: 0, scale: 0.9 }}
     animate={{ opacity: 1, scale: 1 }}
@@ -63,7 +79,7 @@ const AllFoods = () => {
 
           <div className="food__category d-flex align-items-center gap-4">
             <div
-              className={`all__btn ${category === 'ALL' ? 'active' : ''}`}
+              className={`all__btn ${category === "ALL" ? "active" : ""}`}
               onClick={() => {
                 setCategory("ALL");
               }}
@@ -72,7 +88,7 @@ const AllFoods = () => {
             </div>
 
             <button
-              className={`anayemek ${category === 'Ana Yemək' ? 'active' : ''}`}
+              className={`anayemek ${category === "Ana Yemək" ? "active" : ""}`}
               onClick={() => {
                 setCategory("Ana Yemək");
               }}
@@ -80,8 +96,7 @@ const AllFoods = () => {
               Ana Yemək
             </button>
             <button
-              className={`garnir ${category === 'Garnir' ? 'active' : ''}`}
-
+              className={`garnir ${category === "Garnir" ? "active" : ""}`}
               onClick={() => {
                 setCategory("Garnir");
               }}
@@ -89,7 +104,7 @@ const AllFoods = () => {
               Garnir
             </button>
             <button
-              className={`salat ${category === 'Salat' ? 'active' : ''}`}
+              className={`salat ${category === "Salat" ? "active" : ""}`}
               onClick={() => {
                 setCategory("Salat");
               }}
@@ -97,7 +112,7 @@ const AllFoods = () => {
               Salat
             </button>
             <button
-              className={`icki ${category === 'İçki' ? 'active' : ''}`}
+              className={`icki ${category === "İçki" ? "active" : ""}`}
               onClick={() => {
                 setCategory("İçki");
               }}
@@ -107,14 +122,28 @@ const AllFoods = () => {
           </div>
 
           <div className="allfoods">
-            <div className="products-column">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={container}
+              className="products-column"
+            >
               {allProducts.map((item) => (
-                <div key={item.id} className="product-card mt-5">
+                <motion.div
+                  variants={equipments}
+                  key={item.id}
+                  className="product-card mt-5"
+                >
                   <FoodDetails item={item} />
-                </div>
+                </motion.div>
               ))}
-            </div>
-            <div className="form-column">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, translateY: 75 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              transition={{ duration: 0.3 }}
+              className="form-column"
+            >
               <form>
                 <p>Ünvan</p>
                 <input type="text" />
@@ -122,7 +151,7 @@ const AllFoods = () => {
                 <input type="email" />
                 <Cart />
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Container>

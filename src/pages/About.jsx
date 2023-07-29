@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import about1 from '.././assets/about1.png'
 import about2 from '.././assets/about2.png'
@@ -32,7 +32,7 @@ Content here', making it look like readable English. Many desktop publishing pac
       </div>
     </div> </motion.div>
     </Container>
-  )
-}
+  );
+};
 
-export default About
+export default About;
