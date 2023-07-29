@@ -7,6 +7,7 @@ import "../styles/home.css";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 import Feedback from "../components/Feedbacks/feedback";
 import { motion } from "framer-motion";
+import Carousel from "../components/Carousel/Carousel";
 
 const Home = () => {
   return (
@@ -48,7 +49,10 @@ const Home = () => {
         <HowItWorks />
       </section>
       <section style={{ backgroundColor: "#F7F7F7" }}>
-        <Feedback />
+      <Carousel/>
+      </section>
+      <section style={{ backgroundColor: "#F7F7F7" }}>
+        <Feedback/>
       </section>
      
     </motion.div>

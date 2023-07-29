@@ -17,7 +17,7 @@ export default function feedback() {
     return (
        
         <Container>
-            <div className='feedback' >
+            <div className='feedback' style={{marginTop:"20px"}} >
                 <div className="feedback_title">
                     <h4>ONLAR DAİM BİZİ SEÇİR</h4>
                     <p>
