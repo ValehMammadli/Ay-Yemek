@@ -4,10 +4,14 @@ import "../styles/Contact.css";
 import bgcont from "../assets/bg-cont.png";
 import mail from "../assets/mail-cont.png";
 import tel from "../assets/tel-cont.png";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div style={{ backgroundColor: "#F7F7F7" }}>
+    <motion.div style={{ backgroundColor: "#F7F7F7" }} initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    exit={{ opacity: 0, scale: 0.9 }}
+    transition={{ duration: 0.5, ease: 'easeInOut' }}>
       <div
         className="contact-all"
         style={{
@@ -69,7 +73,7 @@ const Contact = () => {
           </form>
         </Container>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

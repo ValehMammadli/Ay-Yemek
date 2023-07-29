@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useSelector } from "react-redux";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -7,8 +7,12 @@ import "../styles/checkout.css";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { motion } from "framer-motion";
 
 const Checkout = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const [deliveryDate, setDeliveryDate] = useState(null);
   const schema = yup.object().shape({
@@ -39,16 +43,19 @@ const Checkout = () => {
   };
 
   const onSubmit = (data) => {
-    console.log(data); // Perform payment processing here (just a placeholder for now)
+    console.log(data); 
   };
 
   return (
-    <div className="checkout-container">
+    <motion.div className="checkout-container" initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    exit={{ opacity: 0, scale: 0.9 }}
+    transition={{ duration: 0.5, ease: 'easeInOut' }}>
       <div className="checkout-form">
         <h2>Ödəniş</h2>
         <div>
           <h5>
-            {" "}
+            
             <label htmlFor="deliveryDate">Menyu Tarixleri</label>
           </h5>
           <DatePicker
@@ -100,7 +107,7 @@ const Checkout = () => {
         </Link>
       </div>
       <div className="checkout-image"></div>
-    </div>
+    </motion.div>
   );
 };
 

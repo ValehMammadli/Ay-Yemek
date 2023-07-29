@@ -2,10 +2,16 @@ import React from 'react'
 import { Container, Row, Col } from "reactstrap";
 import about1 from '.././assets/about1.png'
 import about2 from '.././assets/about2.png'
-import '../styles/about.css'
+import '../styles/about.css' 
+import { motion } from 'framer-motion';
 const About = () => {
   return (
+
     <Container>
+      <motion.div initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}>
     <div className='about_items1'>
 <div className="about_title">
   <h3>Haqqımızda</h3>
@@ -24,7 +30,7 @@ const About = () => {
 <p>
 Content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
       </div>
-    </div>
+    </div> </motion.div>
     </Container>
   )
 }

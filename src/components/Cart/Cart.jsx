@@ -46,7 +46,7 @@ const Cart = () => {
         <span>Total Price: {totalPrice}₼ </span>
       </div>
       <Link to="/checkout" className="checkout-btn">
-        <button>Proceed to Checkout</button>
+        <button>Menyunu Təsdiqlə</button>
       </Link>
     </div>
   );

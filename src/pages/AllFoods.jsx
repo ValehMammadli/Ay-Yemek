@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import products from "../assets/fake-data/products";
 import FoodDetails from "./FoodDetails";
-
+import { motion } from "framer-motion";
 import "../styles/allFoods.css";
 import Cart from "../components/Cart/Cart";
 
@@ -50,7 +50,10 @@ const AllFoods = () => {
   }, [category]);
 
   return (
-    <div style={{ backgroundColor: "#F7F7F7" }}>
+    <motion.div style={{ backgroundColor: "#F7F7F7" }} initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    exit={{ opacity: 0, scale: 0.9 }}
+    transition={{ duration: 0.5, ease: 'easeInOut' }}>
       <Container>
         <div className="paket">
           <Col lg="12" className="text-margin"></Col>
@@ -123,7 +126,7 @@ const AllFoods = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </motion.div>
   );
 };
 

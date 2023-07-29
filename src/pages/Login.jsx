@@ -1,98 +1,66 @@
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import React, { useState, useEffect } from "react";
 import "../styles/Login.css";
-import login from "../assets/login-img.png";
 import { Container } from "reactstrap";
 import { Link } from "react-router-dom";
+import { auth } from "../firebase/Firebase-config";
+import { signInWithEmailAndPassword,onAuthStateChanged, } from "firebase/auth";
+import { motion } from "framer-motion";
 
-const schema = yup.object().shape({
-  email: yup
-    .string()
-    .email("Invalid email address")
-    .required("Email is required"),
-  password: yup.string().required("Password is required"),
-});
+function Login() {
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
 
-const Login = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
-
-  const onSubmit = (data) => {
-    setIsLoggedIn(true);
-    alert("Login successful!");
+  const login = async () => {
+    try {
+      const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+      console.log(user);
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
-  return (
-    <div style={{ backgroundColor: "#F7F7F7" }}>
-      {isLoggedIn ? (
-        <div className="welcome-log-items">
-          <h1>Welcome, logged-in user!</h1>
-          <button onClick={() => setIsLoggedIn(false)}>Logout</button>
-        </div>
-      ) : (
-        <div style={{ display: "flex" }}>
-          <div style={{ width: "50%" }}>
-            <Container>
-              {" "}
-              <div className="login-text">
-                <h1>DAXİL OLUN </h1>
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-              <form onSubmit={handleSubmit(onSubmit)} className="log-form">
-                <div className="email-input">
-                  <label>E-poçt</label>
-                  <input
-                    type="text"
-                    name="email"
-                    {...register("email")}
-                    placeholder="E-poçt adresinizi daxil edin"
-                  />
-                  {errors && errors.email && <p>{errors.email.message}</p>}
-                </div>
+  return ( <Container style={{ backgroundColor: "#F7F7F7" }}>
+    <motion.div  initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    exit={{ opacity: 0, scale: 0.9 }}
+    transition={{ duration: 0.6, ease: 'easeInOut' }}>
+      <div style={{display:"flex"}}>
+      <div style={{ width: "50%" }}>
+      <div className="login-text">
+      <h1> Daxil Olun </h1> </div> 
+      <div className="log-form">
+      <div className="email-input" >
+      <input
+        placeholder="Email..."
+        onChange={(event) => {
+          setLoginEmail(event.target.value);
+        }}
+      /> </div>
+      <div className="pass-input">
+      <input
+        placeholder="Password..."
+        onChange={(event) => {
+          setLoginPassword(event.target.value);
+        }}
+      /> </div>
 
-                <div className="pass-input">
-                  <label>Password</label>
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="Parolunuzu daxil edin"
-                    {...register("password")}
-                  />
-                  {errors && errors.password && (
-                    <p>{errors.password.message}</p>
-                  )}
-                </div>
-
-                <button className="daxil-ol" type="submit">
-                  Login
-                </button>
-              </form>
-              <p className="logtoreg">
+      <button className="daxil-ol" onClick={login}> Login</button>
+       <p className="logtoreg">
                 Hesabınız yoxdur?{" "}
                 <Link to={"/register"}> Qeydiyyatdan keçin</Link>
-              </p>
-            </Container>
-          </div>
-
-          <div
+              </p> </div> </div>
+              
+              <div
             className="login-bg"
-            style={{ width: "50%", position: "relative", height: "890px" }}
+            style={{ width: "50%", position: "relative", height: "683px" }}
           >
             <h3>SİZ SEÇİN BİZ İSTƏDİYİNİZ ZAMANDA YEMƏKLƏRİNİZİ ÇATDIRAQ</h3>
             <p>Sizin həyat tərzinizə və büdcənizə uyğun yemək planları</p>
           </div>
-        </div>
-      )}
-    </div>
+              
+              </div>
+    </motion.div> </Container>
   );
-};
+}
 
 export default Login;
