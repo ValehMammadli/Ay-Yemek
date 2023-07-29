@@ -3,7 +3,7 @@ import "../styles/Login.css";
 import { Container } from "reactstrap";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase/Firebase-config";
-import { signInWithEmailAndPassword,onAuthStateChanged, } from "firebase/auth";
+import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { motion } from "framer-motion";
 
 function Login() {
@@ -12,54 +12,70 @@ function Login() {
 
   const login = async () => {
     try {
-      const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+      const user = await signInWithEmailAndPassword(
+        auth,
+        loginEmail,
+        loginPassword
+      );
       console.log(user);
     } catch (error) {
       console.log(error.message);
     }
   };
 
-  return ( <Container style={{ backgroundColor: "#F7F7F7" }}>
-    <motion.div  initial={{ opacity: 0, scale: 0.9 }}
-    animate={{ opacity: 1, scale: 1 }}
-    exit={{ opacity: 0, scale: 0.9 }}
-    transition={{ duration: 0.6, ease: 'easeInOut' }}>
-      <div style={{display:"flex"}}>
-      <div style={{ width: "50%" }}>
-      <div className="login-text">
-      <h1> Daxil Olun </h1> </div> 
-      <div className="log-form">
-      <div className="email-input" >
-      <input
-        placeholder="Email..."
-        onChange={(event) => {
-          setLoginEmail(event.target.value);
-        }}
-      /> </div>
-      <div className="pass-input">
-      <input
-        placeholder="Password..."
-        onChange={(event) => {
-          setLoginPassword(event.target.value);
-        }}
-      /> </div>
-
-      <button className="daxil-ol" onClick={login}> Login</button>
-       <p className="logtoreg">
-                Hesabınız yoxdur?{" "}
-                <Link to={"/register"}> Qeydiyyatdan keçin</Link>
-              </p> </div> </div>
-              
-              <div
-            className="login-bg"
-            style={{ width: "50%", position: "relative", height: "683px" }}
-          >
-            <h3>SİZ SEÇİN BİZ İSTƏDİYİNİZ ZAMANDA YEMƏKLƏRİNİZİ ÇATDIRAQ</h3>
-            <p>Sizin həyat tərzinizə və büdcənizə uyğun yemək planları</p>
-          </div>
-              
+  return (
+    <div style={{ backgroundColor: "#F7F7F7" }}>
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+        >
+          <div style={{ display: "flex" }}>
+            <div style={{ width: "50%" }}>
+              <div className="login-text">
+                <h1> Daxil Olun </h1>{" "}
               </div>
-    </motion.div> </Container>
+              <div className="log-form">
+                <div className="email-input">
+                  <input
+                    placeholder="Email..."
+                    onChange={(event) => {
+                      setLoginEmail(event.target.value);
+                    }}
+                  />{" "}
+                </div>
+                <div className="pass-input">
+                  <input
+                    placeholder="Password..."
+                    onChange={(event) => {
+                      setLoginPassword(event.target.value);
+                    }}
+                  />{" "}
+                </div>
+                <button className="daxil-ol" onClick={login}>
+                  {" "}
+                  Login
+                </button>
+                <p className="logtoreg">
+                  Hesabınız yoxdur?{" "}
+                  <Link to={"/register"}> Qeydiyyatdan keçin</Link>
+                </p>{" "}
+              </div>{" "}
+            </div>
+
+            <div
+              className="login-bg"
+              style={{ width: "50%", position: "relative", height: "683px" }}
+            >
+              <h3>SİZ SEÇİN BİZ İSTƏDİYİNİZ ZAMANDA YEMƏKLƏRİNİZİ ÇATDIRAQ</h3>
+              <p>Sizin həyat tərzinizə və büdcənizə uyğun yemək planları</p>
+            </div>
+          </div>
+        </motion.div>{" "}
+      </Container>
+    </div>
   );
 }
 
