@@ -65,25 +65,25 @@ const Header = () => {
             </div>
           </div>
           {/* <div className="nav-right d-flex align-items-center gap-3 "> */}
-            {user ? (
-              <div className="nav-right d-flex align-items-center gap-3">
-                <span>{user.email}</span>
-                <button onClick={logout}> Sign Out </button>
-              </div>
-            ) : (
-              <div className="nav-right d-flex align-items-center gap-3">
-                <span className="login">
-                  <Link to="/login">
-                    <button>Daxil Ol</button>
-                  </Link>
-                </span>
-                <span className="register">
-                  <Link to="/register">
-                    <button>Qeydiyyat</button>
-                  </Link>
-                </span>
-              </div>
-            )}
+          {user ? (
+            <div className="nav-right d-flex align-items-center gap-3  sign-out">
+              <span>{user.email}</span>
+              <button onClick={logout}> Sign Out </button>
+            </div>
+          ) : (
+            <div className="nav-right d-flex align-items-center gap-3">
+              <span className="login">
+                <Link to="/login">
+                  <button>Daxil Ol</button>
+                </Link>
+              </span>
+              <span className="register">
+                <Link to="/register">
+                  <button>Qeydiyyat</button>
+                </Link>
+              </span>
+            </div>
+          )}
           {/* </div> */}
         </div>
       </Container>

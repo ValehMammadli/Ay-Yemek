@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -43,19 +43,21 @@ const Checkout = () => {
   };
 
   const onSubmit = (data) => {
-    console.log(data); 
+    console.log(data);
   };
 
   return (
-    <motion.div className="checkout-container" initial={{ opacity: 0, scale: 0.9 }}
-    animate={{ opacity: 1, scale: 1 }}
-    exit={{ opacity: 0, scale: 0.9 }}
-    transition={{ duration: 0.5, ease: 'easeInOut' }}>
+    <motion.div
+      className="checkout-container"
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+    >
       <div className="checkout-form">
         <h2>Ödəniş</h2>
         <div>
           <h5>
-            
             <label htmlFor="deliveryDate">Menyu Tarixleri</label>
           </h5>
           <DatePicker
@@ -79,7 +81,9 @@ const Checkout = () => {
               placeholder="1234 5678 9012 3456"
               {...control.register("cardNumber")}
             />
-            {errors.cardNumber && <p>{errors.cardNumber.message}</p>}
+            {errors.cardNumber && (
+              <p className="pay-err">{errors.cardNumber.message}</p>
+            )}
           </div>
           <div className="payment-input">
             <label htmlFor="expiryDate">Expiry Date</label>
@@ -89,7 +93,9 @@ const Checkout = () => {
               placeholder="MM/YY"
               {...control.register("expiryDate")}
             />
-            {errors.expiryDate && <p>{errors.expiryDate.message}</p>}
+            {errors.expiryDate && (
+              <p className="pay-err">{errors.expiryDate.message}</p>
+            )}
           </div>
           <div className="payment-input">
             <label htmlFor="cvv">CVV</label>
@@ -99,7 +105,7 @@ const Checkout = () => {
               placeholder="123"
               {...control.register("cvv")}
             />
-            {errors.cvv && <p>{errors.cvv.message}</p>}
+            {errors.cvv && <p className="pay-err">{errors.cvv.message}</p>}
           </div>
         </div>
         <Link to="/checkout">
