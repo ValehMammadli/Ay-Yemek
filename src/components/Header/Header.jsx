@@ -78,7 +78,7 @@ const Header = () => {
                 </Link>
               </span>
               <span className="register">
-                <Link to="/register">
+                <Link to="/register" style={{textDecoration:"none"}}>
                   <button>Qeydiyyat</button>
                 </Link>
               </span>

@@ -8,17 +8,15 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <motion.div style={{ backgroundColor: "#F7F7F7" }} initial={{ opacity: 0, scale: 0.9 }}
+    <motion.div  initial={{ opacity: 0, scale: 0.9 }}
     animate={{ opacity: 1, scale: 1 }}
     exit={{ opacity: 0, scale: 0.9 }}
     transition={{ duration: 0.5, ease: 'easeInOut' }}>
       <div
         className="contact-all"
-        style={{
-          backgroundColor: "white",
-        }}
+       
       >
-        <Container>
+        <Container style={{backgroundColor:"white",borderRadius:"50px"}}>
           <div className="contact-text">
             <h3>Əlaqə</h3>
             <p>

@@ -15,7 +15,7 @@ const Home = () => {
     animate={{ opacity: 1, scale: 1 }}
     exit={{ opacity: 0, scale: 0.9 }}
     transition={{ duration: 0.6, ease: 'easeInOut' }}>
-      <section className="home_about" style={{ backgroundColor: "#F7F7F7" }}>
+      <section className="home_about">
         <Container>
           <Row>
             <Col lg="6" md="6">
@@ -45,13 +45,13 @@ const Home = () => {
       >
         <Category />
       </motion.section>
-      <section style={{ backgroundColor: "#F7F7F7" }}>
+      <section>
         <HowItWorks />
       </section>
-      <section style={{ backgroundColor: "#F7F7F7" }}>
+      <section>
       <Carousel/>
       </section>
-      <section style={{ backgroundColor: "#F7F7F7" }}>
+      <section>
         <Feedback/>
       </section>
      

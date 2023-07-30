@@ -8,6 +8,7 @@ import Checkout from "../pages/Checkout";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import About from "../pages/About";
+import Payment  from "../pages/Payment";
 import { AnimatePresence } from "framer-motion";
 
 const Routers = () => {
@@ -24,6 +25,7 @@ const Routers = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
+      <Route path="/payment" element={<Payment />} />
 
 
     </Routes> </AnimatePresence>

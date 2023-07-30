@@ -7,7 +7,7 @@ const Layout = () => {
   return (
     <div>
       <Header />
-      <div>
+      <div style={{backgroundColor:"rgb(247, 247, 247)"}}>
         <Routes />
       </div>
       <Footer />

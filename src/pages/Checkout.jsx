@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { Link } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import "../styles/checkout.css";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
@@ -10,6 +10,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { motion } from "framer-motion";
 
 const Checkout = () => {
+  const navigate = useNavigate()
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -44,6 +45,7 @@ const Checkout = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    navigate("/payment")
   };
 
   return (
@@ -108,9 +110,9 @@ const Checkout = () => {
             {errors.cvv && <p className="pay-err">{errors.cvv.message}</p>}
           </div>
         </div>
-        <Link to="/checkout">
-          <button onClick={handleSubmit(onSubmit)}>Ödəniş et</button>
-        </Link>
+       
+      <button onClick={handleSubmit(onSubmit)}>Ödəniş et</button>
+    
       </div>
       <div className="checkout-image"></div>
     </motion.div>
