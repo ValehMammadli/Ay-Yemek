@@ -4,15 +4,8 @@ import logo from "../../assets/logo.png";
 import { NavLink, Link } from "react-router-dom";
 import "../../styles/header.css";
 import { useState, useEffect } from "react";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut,
-} from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../firebase/Firebase-config";
-// import Login from '../../pages/Login'
-// import Register from "../../pages/Register";
 const nav__links = [
   {
     display: "Ana Səhifə",
@@ -78,7 +71,7 @@ const Header = () => {
                 </Link>
               </span>
               <span className="register">
-                <Link to="/register" style={{textDecoration:"none"}}>
+                <Link to="/register" style={{ textDecoration: "none" }}>
                   <button>Qeydiyyat</button>
                 </Link>
               </span>

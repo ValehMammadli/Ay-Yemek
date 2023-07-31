@@ -11,17 +11,14 @@ const cartSlice = createSlice({
       const { id, title, price, category } = action.payload;
       const existingItemIndex = state.items.find((item) => item.id === id);
 
-      if (existingItemIndex) {
-        // state.totalPrice += price;
-      } else {
+      if (!existingItemIndex) {
         state.items.push({
           id,
           title,
           price,
           category,
-        });
-        state.totalPrice += price;
-      }
+        }); state.totalPrice += price; 
+      } 
     },
     removeFromCart: (state, action) => {
       const itemId = action.payload;

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Login.css";
 import { Container } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 import { auth } from "../firebase/Firebase-config";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { motion } from "framer-motion";
 
-function Login() {
+function Login() {;
+  const navigate = useNavigate();
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
@@ -18,6 +19,7 @@ function Login() {
         loginPassword
       );
       console.log(user);
+      navigate("/home")
     } catch (error) {
       console.log(error.message);
     }
@@ -54,10 +56,10 @@ function Login() {
                     }}
                   />{" "}
                 </div>
-                <button className="daxil-ol" onClick={login}>
+                <button className="daxil-ol" onClick={login}> 
                   {" "}
                   Login
-                </button>
+                </button> 
                 <p className="logtoreg">
                   Hesabınız yoxdur?{" "}
                   <Link to={"/register"}> Qeydiyyatdan keçin</Link>

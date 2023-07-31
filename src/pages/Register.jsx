@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import { auth } from "../firebase/Firebase-config";
 import {
   createUserWithEmailAndPassword,
@@ -11,20 +8,11 @@ import {
 import "../styles/Register.css";
 import { Container } from "reactstrap";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
-// const schema = yup.object().shape({
-//   name: yup.string().required("Name is required"),
-//   surname: yup.string().required("Surname is required"),
-//   birthDate: yup.date().required("Birth Date is required").typeError("sedfgh"),
-//   password: yup.string().required("Password is required"),
-//   email: yup
-//     .string()
-//     .email("Invalid email address")
-//     .required("Email is required"),
-//   address: yup.string().required("Address is required"),
-// });
 
 function Register() {
+  const navigate= useNavigate();
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
 
@@ -36,6 +24,7 @@ function Register() {
         registerPassword
       );
       console.log(user);
+      navigate("/home")
     } catch (error) {
       console.log(error.message);
     }
