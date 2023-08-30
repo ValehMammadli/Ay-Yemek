@@ -16,7 +16,8 @@ const Cart = () => {
   const handleRemoveFromCart = (itemId) => {
     dispatch(removeFromCart(itemId));
   };
-
+  
+  const isCartEmpty = cartItems.length === 0;
   return (
     <motion.div
       initial={{ opacity: 0, translateY: 75 }}
@@ -53,10 +54,15 @@ const Cart = () => {
       ))}
       <div className="total-price">
         <span>Total Price: {totalPrice}₼ </span>
+        
       </div>
-      <Link to="/checkout" className="checkout-btn">
-        <button>Menyunu Təsdiqlə</button>
-      </Link>
+      {isCartEmpty ? (
+        <p className="empty">Your cart is empty. Add items to continue.</p>
+      ) : (
+        <Link to="/checkout" className="checkout-btn">
+          <button>Menyunu Təsdiqlə</button>
+        </Link>
+      )}
     </motion.div>
   );
 };

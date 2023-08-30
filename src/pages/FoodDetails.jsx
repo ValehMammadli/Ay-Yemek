@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/cartSlice';
 
-const FoodDetails = (props) => {
-  const { id, title, image, price, desc, category } = props.item;
+const FoodDetails = ({item}) => {
+  const { id, image,title,desc, price, category } = item;
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
+    
     dispatch(addToCart({ id, title, price, category }));
   };
 
@@ -32,5 +33,6 @@ const FoodDetails = (props) => {
     </div>
   );
 };
+
 
 export default FoodDetails;

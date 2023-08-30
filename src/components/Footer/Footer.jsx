@@ -48,7 +48,7 @@ const Footer = () => {
           </p>
           <div className="footer_nav">
             {footerdata.map((item, index) => (
-              <Link to={item.path}>{item.display}</Link>
+              <Link to={item.path} key={index}>{item.display}</Link>
             ))}
           </div>
           <div className="socialMedia">

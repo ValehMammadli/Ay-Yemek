@@ -73,3 +73,10 @@
     color: rgba(247, 92, 3, 1);
 
 }
+
+.empty {
+    margin-left: 10px;
+    color: rgba(247, 92, 3, 1);
+    margin-top: 50px;
+    font-weight: bold;
+}
